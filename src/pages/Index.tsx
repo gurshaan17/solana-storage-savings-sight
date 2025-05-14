@@ -1,9 +1,9 @@
-
 import CalculatorInputForm from "@/components/CalculatorInputForm";
 import CostResultsDisplay from "@/components/CostResultsDisplay";
 import ComparisonChart from "@/components/ComparisonChart";
 import { useSolanaCostCalculator } from "@/hooks/useSolanaCostCalculator";
 import { Leaf } from "lucide-react"; // Using Leaf for ZK/green tech vibe
+import EducationSection from "@/components/education/EducationSection"; // Import the new section
 
 const Index = () => {
   const { results, calculateCosts, SOL_PRICE_USD } = useSolanaCostCalculator();
@@ -44,6 +44,9 @@ const Index = () => {
             <ComparisonChart results={results} />
           </div>
         )}
+
+        {/* Add the Education Section here */}
+        <EducationSection />
       </div>
       
       <footer className="mt-16 text-center text-sm text-muted-foreground">
