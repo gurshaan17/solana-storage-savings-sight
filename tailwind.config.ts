@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,16 +26,19 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'hsl(var(--primary))', // Default primary
+					foreground: 'hsl(var(--primary-foreground))',
+					solana: '#9945FF', // Solana Purple
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: 'hsl(var(--secondary))', // Default secondary
+					foreground: 'hsl(var(--secondary-foreground))',
+					solana: '#14F195', // Solana Blue/Green
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					foreground: 'hsl(var(--destructive-foreground))',
+					cost: '#ea384c', // Red for costs
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -42,7 +46,8 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					savings: '#33C3F0', // Bright blue/green for savings, distinct from secondary.solana
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
