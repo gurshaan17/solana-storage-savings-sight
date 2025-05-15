@@ -9,10 +9,11 @@ import EducationSection from "@/components/education/EducationSection";
 const Index = () => {
   const { results, calculateCosts, SOL_PRICE_USD } = useSolanaCostCalculator();
 
-  // Assuming 'dark' class is applied to html or body tag elsewhere for dark mode
   return (
-    <div className="min-h-screen bg-background text-foreground py-8 px-4 flex flex-col items-center selection:bg-primary-solana/30 selection:text-white">
-      <header className="text-center mb-12 max-w-4xl">
+    <div 
+      className="min-h-screen bg-background text-foreground py-8 px-4 flex flex-col items-center selection:bg-primary-solana/30 selection:text-white bg-[url('/Container.png')] bg-cover bg-center bg-fixed"
+    >
+      <header className="text-center mb-12 max-w-4xl bg-cardDark/80 backdrop-blur-sm p-6 rounded-lg shadow-xl">
         <div className="inline-flex items-center justify-center bg-cardDark text-primary-foreground p-2.5 rounded-full mb-3 shadow-lg ring-1 ring-primary-solana/50">
           <Leaf size={36} className="text-primary-solana" />
         </div>
@@ -50,7 +51,7 @@ const Index = () => {
         <EducationSection />
       </div>
       
-      <footer className="mt-20 text-center text-sm text-muted-foreground/80">
+      <footer className="mt-20 text-center text-sm text-muted-foreground/80 bg-cardDark/80 backdrop-blur-sm p-4 rounded-lg shadow-xl">
         <p>&copy; {new Date().getFullYear()} Solana Storage Cost Visualizer. All calculations are estimates.</p>
         <p>Inspired by the potential of ZK technology on Solana.</p>
       </footer>
