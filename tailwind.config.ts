@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,39 +22,39 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				background: 'hsl(var(--background))', // Will be very dark
+				foreground: 'hsl(var(--foreground))', // Will be light
 				primary: {
-					DEFAULT: 'hsl(var(--primary))', // Default primary
+					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					solana: '#9945FF', // Solana Purple
+					solana: '#9945FF', // Solana Purple - keep for accents
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))', // Default secondary
+					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
-					solana: '#14F195', // Solana Blue/Green
+					solana: '#14F195', // Solana Green/Blue - keep for accents
 				},
 				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
+					DEFAULT: 'hsl(var(--destructive))', // Base for destructive actions
 					foreground: 'hsl(var(--destructive-foreground))',
-					cost: '#ea384c', // Red for costs
+					cost: '#FF6B6B', // Brighter Red for costs, closer to image's vibe
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					foreground: 'hsl(var(--muted-foreground))' // Light gray for muted text on dark bg
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
-					savings: '#33C3F0', // Bright blue/green for savings, distinct from secondary.solana
+					savings: '#4ADE80', // Brighter Green for savings, closer to image
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: 'hsl(var(--card))', // Dark color for cards
+					foreground: 'hsl(var(--card-foreground))' // Light text on cards
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -66,7 +65,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Custom colors from the new theme
+                brandPurple: '#7F56D9', // A distinct purple from the image
+                lightGray: '#E0E0E0',
+                darkGray: '#333333',
+                cardDark: '#1A1F2C', // Dark background for cards like in the image
+                inputDark: '#10141C', // Darker background for inputs
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

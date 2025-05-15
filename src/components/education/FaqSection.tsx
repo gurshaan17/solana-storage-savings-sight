@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -29,15 +28,17 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <Card className="bg-card/80">
+    <Card className="bg-inputDark border-slate-700">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-secondary-solana">Frequently Asked Questions</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Frequently Asked Questions</CardTitle>
       </CardHeader>
       <CardContent>
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem value={`item-${index}`} key={index}>
-              <AccordionTrigger className="text-lg text-left hover:text-primary-solana">{faq.question}</AccordionTrigger>
+            <AccordionItem value={`item-${index}`} key={index} className="border-slate-700">
+              <AccordionTrigger className="text-lg text-left hover:text-brandPurple text-foreground data-[state=open]:text-brandPurple">
+                {faq.question}
+              </AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground">
                 {faq.answer}
               </AccordionContent>

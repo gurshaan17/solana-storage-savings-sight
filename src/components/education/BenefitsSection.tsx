@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Layers, ArrowUp } from 'lucide-react'; // Using Layers for scalability, ArrowUp for faster/improvement
+import { Layers, ArrowUp } from 'lucide-react';
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
@@ -11,21 +11,21 @@ const BenefitsSection: React.FC = () => {
       description: "Support millions of accounts without bloating the blockchain, enabling larger-scale applications.",
     },
     {
-      icon: <ArrowUp className="h-10 w-10 text-accent-savings" />, // Representing speed/efficiency
+      icon: <ArrowUp className="h-10 w-10 text-accent-savings" />,
       title: "Faster Transactions",
       description: "Reduced data size can contribute to faster transaction processing and confirmation times.",
     },
   ];
 
   return (
-    <Card className="bg-card/80">
+    <Card className="bg-inputDark border-slate-700">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-secondary-solana">Key Benefits Beyond Cost Savings</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Key Benefits Beyond Cost Savings</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-6 bg-muted/30 rounded-lg space-y-3">
+            <div key={index} className="flex flex-col items-center text-center p-6 bg-cardDark/50 rounded-lg space-y-3 border border-slate-700/50">
               <div className="p-3 bg-accent-savings/20 rounded-full">
                 {benefit.icon}
               </div>

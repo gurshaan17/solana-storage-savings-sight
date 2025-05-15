@@ -42,18 +42,19 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
       });
     } else {
       console.error("Invalid input values");
+      // Consider adding user-facing error feedback here, e.g., using a toast
     }
   };
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md bg-cardDark border-slate-700 shadow-xl">
       <CardHeader>
-        <CardTitle className="text-2xl text-primary-solana">Cost Calculator Inputs</CardTitle>
+        <CardTitle className="text-2xl text-foreground">Cost Calculator Inputs</CardTitle>
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="numAccounts" className="text-lg">Number of Accounts</Label>
+            <Label htmlFor="numAccounts" className="text-sm font-medium text-muted-foreground">Number of Accounts</Label>
             <Input
               id="numAccounts"
               type="number"
@@ -62,11 +63,11 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
               placeholder="e.g., 1000"
               min="1"
               required
-              className="text-base"
+              className="bg-inputDark border-slate-600 text-foreground placeholder:text-muted-foreground/70 focus:ring-brandPurple"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="dataSize" className="text-lg">Average Data Size per Account (Bytes)</Label>
+            <Label htmlFor="dataSize" className="text-sm font-medium text-muted-foreground">Average Data Size per Account (Bytes)</Label>
             <Input
               id="dataSize"
               type="number"
@@ -75,12 +76,12 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
               placeholder="e.g., 256"
               min="0"
               required
-              className="text-base"
+              className="bg-inputDark border-slate-600 text-foreground placeholder:text-muted-foreground/70 focus:ring-brandPurple"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="duration" className="text-lg">Duration</Label>
+              <Label htmlFor="duration" className="text-sm font-medium text-muted-foreground">Duration</Label>
               <Input
                 id="duration"
                 type="number"
@@ -89,25 +90,28 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
                 placeholder="e.g., 1"
                 min="1"
                 required
-                className="text-base"
+                className="bg-inputDark border-slate-600 text-foreground placeholder:text-muted-foreground/70 focus:ring-brandPurple"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="durationUnit" className="text-lg">Unit</Label>
+              <Label htmlFor="durationUnit" className="text-sm font-medium text-muted-foreground">Unit</Label>
               <Select value={durationUnit} onValueChange={(value: 'months' | 'years') => setDurationUnit(value)}>
-                <SelectTrigger id="durationUnit" className="text-base">
+                <SelectTrigger id="durationUnit" className="bg-inputDark border-slate-600 text-foreground focus:ring-brandPurple">
                   <SelectValue placeholder="Select unit" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="months">Months</SelectItem>
-                  <SelectItem value="years">Years</SelectItem>
+                <SelectContent className="bg-cardDark border-slate-600 text-foreground">
+                  <SelectItem value="months" className="hover:bg-slate-700">Months</SelectItem>
+                  <SelectItem value="years" className="hover:bg-slate-700">Years</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
         </CardContent>
         <CardFooter>
-          <Button type="submit" className="w-full bg-primary-solana hover:bg-primary-solana/90 text-primary-foreground text-lg py-3">
+          <Button 
+            type="submit" 
+            className="w-full bg-brandPurple hover:bg-brandPurple/90 text-white text-lg py-3 transition-all duration-150 ease-in-out ring-2 ring-transparent hover:ring-brandPurple/50 focus:ring-brandPurple"
+          >
             Calculate Savings
           </Button>
         </CardFooter>
@@ -117,4 +121,3 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
 };
 
 export default CalculatorInputForm;
-

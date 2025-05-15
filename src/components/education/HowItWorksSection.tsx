@@ -7,61 +7,60 @@ import { Layers3, Database, ShieldCheck, SquareCheck, ArrowRight } from 'lucide-
 const HowItWorksSection: React.FC = () => {
   const steps = [
     {
-      icon: <Layers3 className="h-8 w-8 text-primary-solana" />,
+      icon: <Layers3 className="h-8 w-8 text-brandPurple" />,
       title: "Step 1: Data Compression",
       description: "Account data is compressed using efficient algorithms, reducing its size significantly.",
     },
     {
-      icon: <Database className="h-8 w-8 text-primary-solana" />,
+      icon: <Database className="h-8 w-8 text-brandPurple" />,
       title: "Step 2: Off-Chain Storage",
       description: "Compressed data is stored off-chain in a Merkle tree structure, with only the root hash on-chain.",
     },
     {
-      icon: <ShieldCheck className="h-8 w-8 text-primary-solana" />,
+      icon: <ShieldCheck className="h-8 w-8 text-brandPurple" />,
       title: "Step 3: ZK Proofs",
       description: "Zero-knowledge proofs verify data integrity without revealing the actual data, ensuring security.",
     },
     {
-      icon: <SquareCheck className="h-8 w-8 text-primary-solana" />,
+      icon: <SquareCheck className="h-8 w-8 text-brandPurple" />,
       title: "Step 4: On-Chain Verification",
       description: "The Solana blockchain verifies the proofs, ensuring data hasn't been tampered with.",
     },
   ];
 
   return (
-    <Card className="bg-card/80">
+    <Card className="bg-inputDark border-slate-700">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-secondary-solana">How ZK Compression Works</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">How ZK Compression Works</CardTitle>
         <CardDescription className="text-md text-muted-foreground">
           ZK Compression on Solana uses zero-knowledge proofs and Merkle trees to drastically reduce on-chain storage requirements while maintaining data integrity and security.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="flex flex-col sm:flex-row items-center justify-around p-4 bg-muted/50 rounded-lg gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-around p-4 bg-cardDark/70 rounded-lg gap-4 border border-slate-600">
           <div className="text-center">
-            <p className="font-semibold text-lg text-primary-solana">Compressed Account</p>
-            <p className="text-3xl font-bold text-accent-savings">0.28 KB</p>
+            <p className="font-semibold text-lg text-foreground">Compressed Account</p>
+            <p className="text-3xl font-bold text-accent-savings">0.008 KB <span className="text-xs text-muted-foreground">(Example for small accounts)</span></p> {/* Updated example value */}
           </div>
-          <ArrowRight className="h-8 w-8 text-foreground hidden sm:block" />
-           <p className="font-semibold text-md text-center text-muted-foreground my-2 sm:my-0">via Merkle Tree + Zero-Knowledge Proofs</p>
-          <ArrowRight className="h-8 w-8 text-foreground hidden sm:block transform rotate-90 sm:rotate-0" />
+          <ArrowRight className="h-8 w-8 text-muted-foreground hidden sm:block" />
+           <p className="font-semibold text-sm text-center text-muted-foreground my-2 sm:my-0">via Merkle Tree + Zero-Knowledge Proofs</p>
+          <ArrowRight className="h-8 w-8 text-muted-foreground hidden sm:block transform rotate-90 sm:rotate-0" />
           <div className="text-center">
-            <p className="font-semibold text-lg text-primary-solana">Standard Account</p>
-            <p className="text-3xl font-bold text-destructive-cost">2.5 KB</p>
+            <p className="font-semibold text-lg text-foreground">Standard Account</p>
+            <p className="text-3xl font-bold text-destructive-cost">~1 KB+ <span className="text-xs text-muted-foreground">(Varies by data)</span></p> {/* Updated example value */}
           </div>
         </div>
 
         <div className="text-center my-4">
-          {/* Placeholder for animation button, can be styled further or made functional later */}
-          <Button variant="outline" className="border-secondary-solana text-secondary-solana hover:bg-secondary-solana/10">
+          <Button variant="outline" className="border-brandPurple text-brandPurple hover:bg-brandPurple/10 hover:text-white">
             Play Animation (Concept)
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {steps.map((step, index) => (
-            <div key={index} className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
-              <div className="flex-shrink-0">{step.icon}</div>
+            <div key={index} className="flex items-start space-x-4 p-4 bg-cardDark/50 rounded-lg border border-slate-700/50">
+              <div className="flex-shrink-0 mt-1">{step.icon}</div>
               <div>
                 <h4 className="font-semibold text-lg text-foreground">{step.title}</h4>
                 <p className="text-sm text-muted-foreground">{step.description}</p>

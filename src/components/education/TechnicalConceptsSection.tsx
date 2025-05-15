@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -29,15 +28,17 @@ const TechnicalConceptsSection: React.FC = () => {
   ];
 
   return (
-    <Card className="bg-card/80">
+    <Card className="bg-inputDark border-slate-700">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-secondary-solana">Technical Concepts</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Technical Concepts</CardTitle>
       </CardHeader>
       <CardContent>
         <Accordion type="single" collapsible className="w-full">
           {concepts.map((concept, index) => (
-            <AccordionItem value={`item-${index}`} key={index}>
-              <AccordionTrigger className="text-lg text-left hover:text-primary-solana">{concept.question}</AccordionTrigger>
+            <AccordionItem value={`item-${index}`} key={index} className="border-slate-700">
+              <AccordionTrigger className="text-lg text-left hover:text-brandPurple text-foreground data-[state=open]:text-brandPurple">
+                {concept.question}
+              </AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground">
                 {concept.answer}
               </AccordionContent>

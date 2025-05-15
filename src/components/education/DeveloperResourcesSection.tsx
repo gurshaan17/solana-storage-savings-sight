@@ -7,16 +7,16 @@ import { Link as LinkIcon } from 'lucide-react';
 const DeveloperResourcesSection: React.FC = () => {
   // Placeholder links - replace with actual resource URLs
   const resources = [
-    { name: "Solana Docs: State Compression", url: "#" },
-    { name: "Bubblegum: Compressed NFTs Standard", url: "#" },
-    { name: "Understanding Merkle Trees", url: "#" },
-    { name: "Introduction to Zero-Knowledge Proofs", url: "#" },
+    { name: "Solana Docs: State Compression", url: "https://docs.solana.com/developing/state-compression" },
+    { name: "Bubblegum: Compressed NFTs Standard", url: "https://developers.metaplex.com/bubblegum" },
+    { name: "Understanding Merkle Trees", url: "https://en.wikipedia.org/wiki/Merkle_tree" },
+    { name: "Introduction to Zero-Knowledge Proofs", url: "https://ethereum.org/en/zero-knowledge-proofs/" },
   ];
 
   return (
-    <Card className="bg-card/80">
+    <Card className="bg-inputDark border-slate-700">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-secondary-solana">Developer Resources</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Developer Resources</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <p className="text-muted-foreground">
@@ -28,7 +28,7 @@ const DeveloperResourcesSection: React.FC = () => {
               key={index}
               variant="outline"
               asChild
-              className="justify-start text-left h-auto py-3 border-primary-solana text-primary-solana hover:bg-primary-solana/10"
+              className="justify-start text-left h-auto py-3 border-brandPurple text-brandPurple hover:bg-brandPurple/10 hover:text-white focus:ring-brandPurple"
             >
               <a href={resource.url} target="_blank" rel="noopener noreferrer">
                 <LinkIcon className="mr-2 h-4 w-4" />
