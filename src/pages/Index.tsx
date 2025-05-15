@@ -14,10 +14,30 @@ const Index = () => {
     >
       <header className="text-center mt-12 mb-12 max-w-4xl  backdrop-blur-sm p-6 rounded-lg shadow-xl">
          <p className="text-sm font-medium mb-4 inline-block bg-black/40 text-[#D6BCFA] px-6 py-2 rounded-full shadow-md border border-slate-600">Innovative Cost Calculator</p>
-        <h1 className="text-5xl md:text-6xl font-extrabold text-foreground mb-3 tracking-tight">
-          Solana ZK <span className="text-brandPurple">Compression</span>
+        <h1 className="text-5xl md:text-6xl font-semibold text-foreground mb-3 tracking-tight">
+          <span
+            style={{
+              background: "linear-gradient(90deg, #6A82FC 0%, #FFECE0 80%, #FFFFFF 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            Solana ZK Compression
+          </span>
           <br />
-          Storage Cost <span className="text-brandPurple">Visualizer</span>
+          <span
+            style={{
+              background: "linear-gradient(90deg, #6A82FC 0%, #FFECE0 80%, #FFFFFF 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            Storage Cost Visualizer
+          </span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
           Interactively explore the significant rent savings achieved by using ZK compressed accounts on Solana compared to traditional accounts.
