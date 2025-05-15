@@ -1,4 +1,3 @@
-
 import CalculatorInputForm from "@/components/CalculatorInputForm";
 import CostResultsDisplay from "@/components/CostResultsDisplay";
 import ComparisonChart from "@/components/ComparisonChart";
@@ -14,7 +13,7 @@ const Index = () => {
       className="min-h-screen bg-background text-foreground py-8 px-4 flex flex-col items-center selection:bg-primary-solana/30 selection:text-white bg-[url('/Container.png')] bg-cover bg-center bg-fixed"
     >
       <header className="text-center mt-12 mb-12 max-w-4xl  backdrop-blur-sm p-6 rounded-lg shadow-xl">
-         <p className="text-sm text-primary-solana font-medium mb-2">Innovative Cost Calculator</p>
+         <p className="text-sm font-medium mb-4 inline-block bg-black/40 text-[#D6BCFA] px-6 py-2 rounded-full shadow-md border border-slate-600">Innovative Cost Calculator</p>
         <h1 className="text-5xl md:text-6xl font-extrabold text-foreground mb-3 tracking-tight">
           Solana ZK <span className="text-brandPurple">Compression</span>
           <br />
