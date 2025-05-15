@@ -47,7 +47,7 @@ const CalculatorInputForm: React.FC<CalculatorInputFormProps> = ({ onCalculate }
   };
 
   return (
-    <Card className="w-full max-w-md bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-700/60">
+    <Card className="w-full max-w-md bg-transparent backdrop-blur-sm rounded-2xl shadow-xl border border-slate-700/60">
       <CardHeader>
         <CardTitle className="text-2xl text-foreground">Cost Calculator Inputs</CardTitle>
       </CardHeader>

@@ -10,7 +10,7 @@ import { BookOpen } from 'lucide-react';
 
 const EducationSection: React.FC = () => {
   return (
-    <Card className="w-full mt-12 bg-cardDark border-slate-700 shadow-xl">
+    <Card className="w-full mt-12 bg-transparent border-slate-700 shadow-xl">
       <CardHeader className="text-center">
         <div className="inline-flex items-center justify-center bg-inputDark text-primary-foreground p-3 rounded-full mb-4 shadow-lg mx-auto ring-1 ring-brandPurple/50">
           <BookOpen size={40} className="text-brandPurple" />

@@ -43,7 +43,7 @@ const ComparisonChart: React.FC<ComparisonChartProps> = ({ results }) => {
 
 
   return (
-    <Card className="w-full mt-8 bg-cardDark border-slate-700 shadow-xl">
+    <Card className="w-full mt-8 bg-transparent border-slate-700 shadow-xl">
       <CardHeader>
         <CardTitle className="text-2xl text-foreground">Cost Comparison (SOL)</CardTitle>
       </CardHeader>

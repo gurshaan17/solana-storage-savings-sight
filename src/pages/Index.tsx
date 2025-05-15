@@ -12,12 +12,12 @@ const Index = () => {
     <div 
       className="min-h-screen bg-background text-foreground py-8 px-4 flex flex-col items-center selection:bg-primary-solana/30 selection:text-white bg-[url('/Container.png')] bg-cover bg-center bg-fixed"
     >
-      <header className="text-center mt-12 mb-12 max-w-4xl  backdrop-blur-sm p-6 rounded-lg shadow-xl">
+      <header className="text-center mt-24 mb-12 max-w-4xl  backdrop-blur-sm p-6 rounded-lg shadow-xl">
          <p className="text-sm font-medium mb-4 inline-block bg-black/40 text-[#D6BCFA] px-6 py-2 rounded-full shadow-md border border-slate-600">Innovative Cost Calculator</p>
         <h1 className="text-5xl md:text-6xl font-semibold text-foreground mb-3 tracking-tight">
           <span
             style={{
-              background: "linear-gradient(90deg, #6A82FC 0%, #FFECE0 80%, #FFFFFF 100%)",
+              background: "linear-gradient(90deg, #FFFFFF 0%, #FFECE0 70%, #6A82FC 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -29,7 +29,7 @@ const Index = () => {
           <br />
           <span
             style={{
-              background: "linear-gradient(90deg, #6A82FC 0%, #FFECE0 80%, #FFFFFF 100%)",
+              background: "linear-gradient(90deg, #FFFFFF 0%, #FFECE0 70%, #6A82FC 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -45,7 +45,7 @@ const Index = () => {
         </p>
       </header>
 
-      <div className="w-full max-w-5xl space-y-12">
+      <div className="w-full max-w-5xl space-y-12 pt-28">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1">
             <CalculatorInputForm onCalculate={calculateCosts} />

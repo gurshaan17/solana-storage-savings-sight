@@ -28,7 +28,7 @@ const TechnicalConceptsSection: React.FC = () => {
   ];
 
   return (
-    <Card className="bg-inputDark border-slate-700">
+    <Card className="bg-transparent border-slate-700">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-foreground">Technical Concepts</CardTitle>
       </CardHeader>

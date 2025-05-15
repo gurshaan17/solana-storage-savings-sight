@@ -17,7 +17,7 @@ const CostResultsDisplay: React.FC<CostResultsDisplayProps> = ({ results, solPri
   const formatUsd = (amount: number) => "$" + amount.toFixed(2) + " USD";
 
   return (
-    <Card className="w-full bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-700/60">
+    <Card className="w-full bg-transparent backdrop-blur-sm rounded-2xl shadow-xl border border-slate-700/60">
       <CardHeader>
         <CardTitle className="text-2xl text-foreground">Estimated Costs & Savings</CardTitle>
         <p className="text-sm text-muted-foreground">(Based on SOL @ ${solPriceUsd})</p>

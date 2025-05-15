@@ -29,7 +29,7 @@ const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <Card className="bg-inputDark border-slate-700">
+    <Card className="bg-transparent border-slate-700">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-foreground">How ZK Compression Works</CardTitle>
         <CardDescription className="text-md text-muted-foreground">
@@ -50,13 +50,6 @@ const HowItWorksSection: React.FC = () => {
             <p className="text-3xl font-bold text-destructive-cost">~1 KB+ <span className="text-xs text-muted-foreground">(Varies by data)</span></p> {/* Updated example value */}
           </div>
         </div>
-
-        <div className="text-center my-4">
-          <Button variant="outline" className="border-brandPurple text-brandPurple hover:bg-brandPurple/10 hover:text-white">
-            Play Animation (Concept)
-          </Button>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {steps.map((step, index) => (
             <div key={index} className="flex items-start space-x-4 p-4 bg-cardDark/50 rounded-lg border border-slate-700/50">
